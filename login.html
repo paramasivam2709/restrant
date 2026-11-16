@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | STACKLY – Taste the Excellence</title>
+<meta name="description" content="Log in to your STACKLY account.">
+<link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/auth.css">
+</head><body><div class="preloader" id="preloader">
+  <img src="assets/svg/logo-white.svg" alt="STACKLY" class="preloader__logo">
+  <div class="preloader__dish"></div>
+  <div class="preloader__bar"><span></span></div>
+  <div class="preloader__pct">0%</div>
+</div>
+<main class="auth">
+  <div class="auth__visual">
+    <img src="assets/img/hero/hero-bg.webp" alt="">
+    <div class="auth__visual-content">
+      <a href="index.html"><img src="assets/svg/logo-white.svg" alt="STACKLY" style="height:44px;margin-bottom:30px"></a>
+      <h2>Taste the Excellence.</h2>
+      <p>Your table, your cravings, your dashboard — all one login away.</p>
+      <div class="auth__quote">"Good food is the foundation of genuine happiness."<b>— The STACKLY Family</b></div>
+    </div>
+  </div>
+  <div class="auth__panel"><div class="auth__box">
+    
+<a href="index.html" class="auth__logo auth__logo--mobile"><img src="assets/svg/logo.svg" alt="STACKLY"></a>
+<h1>Welcome Back</h1>
+<p>Log in to your STACKLY account to order, book and track.</p>
+<form id="loginForm" novalidate>
+  <div class="form-group"><label for="login-email">Email Address</label><input id="login-email" class="form-control" type="email" name="email" placeholder="you@example.com" autocomplete="email"><span class="field-error"></span></div>
+  <div class="form-group"><label for="login-password">Password</label>
+    <div class="input-icon"><input id="login-password" class="form-control" type="password" name="password" placeholder="Enter your password" autocomplete="current-password">
+      <button type="button" class="input-icon__btn" data-toggle-pw="#login-password" aria-label="Show password" aria-pressed="false"><svg><use href="assets/svg/sprite.svg#eye"></use></svg></button></div>
+    <span class="field-error"></span></div>
+  <div class="form-group"><label for="login-role">Login as</label>
+    <select id="login-role" class="form-control" name="role">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+  </div>
+  <button class="btn btn--primary btn--block btn--lg" type="submit">Login <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></button>
+</form>
+<div class="auth__divider">or</div>
+<p class="auth__alt" style="margin-top:0">New to STACKLY? <a href="register.html">Create an account</a></p>
+<p class="auth__notice">Frontend demo only — any valid email is accepted; this does not authenticate accounts.</p>
+  </div></div>
+</main>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/auth.js"></script>
+
+</body></html>

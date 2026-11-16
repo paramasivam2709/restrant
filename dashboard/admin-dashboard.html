@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel | STACKLY</title>
+<link rel="icon" type="image/svg+xml" href="../assets/svg/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head><body>
+<div class="dash__overlay"></div>
+<div class="dash">
+  <aside class="dash__sidebar">
+    <div class="dash__brand"><img src="../assets/svg/logo-white.svg" alt="STACKLY"><div><small>Admin Panel</small></div></div>
+    <nav class="dash__nav">
+      <div class="dash__nav-label">Menu</div>
+      <a href="#" data-panel="panel-overview" class="is-active"><svg><use href="../assets/svg/sprite.svg#grid"></use></svg><span>Dashboard</span></a>
+<a href="#" data-panel="panel-users" class=""><svg><use href="../assets/svg/sprite.svg#users"></use></svg><span>Manage Users</span></a>
+<a href="#" data-panel="panel-sellers" class=""><svg><use href="../assets/svg/sprite.svg#box"></use></svg><span>Manage Sellers</span></a>
+<a href="#" data-panel="panel-products" class=""><svg><use href="../assets/svg/sprite.svg#menu-book"></use></svg><span>Manage Products</span></a>
+<a href="#" data-panel="panel-categories" class=""><svg><use href="../assets/svg/sprite.svg#filter"></use></svg><span>Food Categories</span></a>
+<a href="#" data-panel="panel-orders" class=""><svg><use href="../assets/svg/sprite.svg#clock"></use></svg><span>Manage Orders</span></a>
+<a href="#" data-panel="panel-reservations" class=""><svg><use href="../assets/svg/sprite.svg#calendar"></use></svg><span>Reservations</span></a>
+<a href="#" data-panel="panel-payments" class=""><svg><use href="../assets/svg/sprite.svg#card"></use></svg><span>Payments</span></a>
+<a href="#" data-panel="panel-blogs" class=""><svg><use href="../assets/svg/sprite.svg#edit"></use></svg><span>Manage Blogs</span></a>
+<a href="#" data-panel="panel-reviews" class=""><svg><use href="../assets/svg/sprite.svg#star"></use></svg><span>Customer Reviews</span></a>
+<a href="#" data-panel="panel-reports" class=""><svg><use href="../assets/svg/sprite.svg#chart"></use></svg><span>Reports</span></a>
+<a href="#" data-panel="panel-settings" class=""><svg><use href="../assets/svg/sprite.svg#logout"></use></svg><span>Settings</span></a>
+    </nav>
+    <div class="dash__user">
+      <img src="../assets/img/testimonials/aarav-sharma.webp" alt="">
+      <div><b>Admin Panel</b><small>Super Admin</small></div>
+      <button class="dash__logout" data-logout aria-label="Logout"><svg><use href="../assets/svg/sprite.svg#logout"></use></svg></button>
+    </div>
+  </aside>
+  <main class="dash__main">
+    <div class="dash__topbar">
+      <button class="dash__burger" aria-label="Menu"><svg><use href="../assets/svg/sprite.svg#grid"></use></svg></button>
+      <div class="dash__search"><svg><use href="../assets/svg/sprite.svg#search"></use></svg><input placeholder="Search…"></div>
+      <div class="dash__top-actions">
+        <button class="dash__icon-btn" aria-label="Notifications"><svg><use href="../assets/svg/sprite.svg#sparkle"></use></svg><span class="dot"></span></button>
+        <a class="dash__icon-btn" href="../index.html" aria-label="Back to site"><svg><use href="../assets/svg/sprite.svg#home"></use></svg></a>
+      </div>
+    </div>
+    <div class="dash__content">
+      <div class="dash__title-row"><div><h1 data-dash-title>Overview</h1><p>Welcome back, Admin. Here's what's cooking.</p></div></div>
+      
+<div class="dash-panel" id="panel-overview">
+  <div class="widgets">
+    <div class="widget" style="color:#FF6B1A">
+  <div class="widget__icon" style="background:#FFF0E4;color:#FF6B1A"><svg><use href="../assets/svg/sprite.svg#dollar"></use></svg></div>
+  <div><b>₹18.4L</b><small>Total Revenue</small></div>
+  <span class="widget__trend widget__trend--up">+18% MoM</span></div>
+    <div class="widget" style="color:#E8A020">
+  <div class="widget__icon" style="background:#FDF3E3;color:#E8A020"><svg><use href="../assets/svg/sprite.svg#box"></use></svg></div>
+  <div><b>1,286</b><small>Total Orders</small></div>
+  <span class="widget__trend widget__trend--up">+9% MoM</span></div>
+    <div class="widget" style="color:#2E9E5B">
+  <div class="widget__icon" style="background:#E8F7EE;color:#2E9E5B"><svg><use href="../assets/svg/sprite.svg#users"></use></svg></div>
+  <div><b>8,942</b><small>Total Customers</small></div>
+  <span class="widget__trend widget__trend--up">+6% MoM</span></div>
+    <div class="widget" style="color:#8B3BD6">
+  <div class="widget__icon" style="background:#F3E8FD;color:#8B3BD6"><svg><use href="../assets/svg/sprite.svg#menu-book"></use></svg></div>
+  <div><b>152</b><small>Total Products</small></div>
+  <span class="widget__trend widget__trend--up">+4 new</span></div>
+  </div>
+  <div class="dash-grid-2">
+    <div class="panel"><div class="panel__head"><h3>Revenue Overview — 2026</h3><span class="badge-soft"><svg><use href="../assets/svg/sprite.svg#chart"></use></svg> Live</span></div>
+      <div class="panel__body chart-box"><canvas id="chartRevenue" height="260"></canvas></div></div>
+    <div style="display:grid;gap:26px">
+      <div class="panel" style="margin:0"><div class="panel__head"><h3>Orders This Week</h3></div>
+        <div class="panel__body chart-box"><canvas id="chartOrders" height="180"></canvas></div></div>
+      <div class="panel" style="margin:0"><div class="panel__head"><h3>Sales by Category</h3></div>
+        <div class="panel__body" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+          <div class="chart-box" style="flex:1;min-width:180px"><canvas id="chartCategory" height="170"></canvas></div>
+          <div class="legend" style="flex-direction:column;gap:10px">
+            <span><i style="background:#FF6B1A"></i>Main Course</span><span><i style="background:#D6AD60"></i>Fast Food</span>
+            <span><i style="background:#171717"></i>Desserts</span><span><i style="background:#F0A868"></i>Beverages</span><span><i style="background:#8a8078"></i>Salads</span>
+          </div>
+        </div></div>
+    </div>
+  </div>
+  <div class="panel"><div class="panel__head"><h3>Latest Orders</h3><a href="#" class="panel__action" data-panel-link="panel-orders">Manage <svg><use href="../assets/svg/sprite.svg#arrow"></use></svg></a></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Order</th><th>Amount</th><th>Payment</th><th>Status</th></tr></thead><tbody><tr><td><div class="cell-prod"><img src="../assets/img/food/biryani.webp" alt=""><div><b>Chicken Biryani x2</b><small>#SLY-9041 · Aarav S.</small></div></div></td><td>₹498</td><td>UPI</td><td><span class='status status--delivered'>Delivered</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/pizza.webp" alt=""><div><b>Margherita Pizza L</b><small>#SLY-9046 · Priya N.</small></div></div></td><td>₹299</td><td>Card</td><td><span class='status status--onway'>On the way</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/tandoori.webp" alt=""><div><b>Tandoori Chicken</b><small>#SLY-9049 · Rohan M.</small></div></div></td><td>₹279</td><td>COD</td><td><span class='status status--preparing'>Preparing</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/pasta.webp" alt=""><div><b>Alfredo Pasta x2</b><small>#SLY-9051 · Meera K.</small></div></div></td><td>₹458</td><td>UPI</td><td><span class='status status--pending'>Pending</span></td></tr></tbody></table></div></div>
+  <div class="panel"><div class="panel__head"><h3>Recent Transactions</h3></div><div class="panel__body">
+    <div class="notif"><span class="notif__icon" style="background:#E8F7EE;color:var(--success)"><svg><use href="../assets/svg/sprite.svg#card"></use></svg></span><div><p><b>₹1,299 received</b> from Priya N. · UPI · #TXN-7712</p><small>8 min ago</small></div></div>
+    <div class="notif"><span class="notif__icon" style="background:#FFF0E4;color:var(--primary)"><svg><use href="../assets/svg/sprite.svg#card"></use></svg></span><div><p><b>₹498 received</b> from Aarav S. · UPI · #TXN-7711</p><small>1 hr ago</small></div></div>
+    <div class="notif"><span class="notif__icon" style="background:#FDF3E3;color:var(--warning)"><svg><use href="../assets/svg/sprite.svg#dollar"></use></svg></span><div><p><b>₹279 COD collected</b> · #TXN-7710 · settled to petty cash</p><small>3 hrs ago</small></div></div>
+  </div></div>
+</div>
+<div class="dash-panel" id="panel-users" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Manage Users</h3></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>User</th><th>Contact</th><th>Orders</th><th>Status</th><th>Actions</th></tr></thead><tbody><tr><td><div class="cell-prod"><img src="../assets/img/testimonials/aarav-sharma.webp" alt=""><div><b>Aarav Sharma</b><small>Joined 2023</small></div></div></td><td>user@stackly.com</td><td>48</td><td><span class='status status--active'>Active</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/testimonials/priya-nair.webp" alt=""><div><b>Priya Nair</b><small>Joined 2024</small></div></div></td><td>priya@example.com</td><td>31</td><td><span class='status status--active'>Active</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/testimonials/rohan-mehta.webp" alt=""><div><b>Rohan Mehta</b><small>Joined 2022</small></div></div></td><td>rohan@example.com</td><td>74</td><td><span class='status status--active'>Active</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/testimonials/aarav-sharma.webp" alt=""><div><b>Test Account</b><small>Joined 2026</small></div></div></td><td>test@example.com</td><td>0</td><td><span class='status status--cancelled'>Blocked</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-sellers" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Manage Sellers</h3></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Seller</th><th>Speciality</th><th>Products</th><th>Revenue</th><th>Status</th></tr></thead><tbody><tr><td><div class="cell-prod"><img src="../assets/img/chefs/chef-marco.webp" alt=""><div><b>Stackly Kitchens</b><small>Mumbai HQ</small></div></div></td><td>Multi-cuisine</td><td>96</td><td>₹14.2L</td><td><span class='status status--active'>Verified</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/chefs/chef-elena.webp" alt=""><div><b>Sweet Lab by Elena</b><small>Pune</small></div></div></td><td>Desserts</td><td>34</td><td>₹3.1L</td><td><span class='status status--active'>Verified</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/chefs/chef-kenji.webp" alt=""><div><b>Smoke &amp; Char</b><small>Bengaluru</small></div></div></td><td>Grills</td><td>22</td><td>₹1.1L</td><td><span class='status status--pending'>Pending KYC</span></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-products" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Product Management</h3><button class="btn btn--primary btn--sm">+ Add Product</button></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Availability</th><th>Actions</th></tr></thead><tbody><tr><td><div class="cell-prod"><img src="../assets/img/food/biryani.webp" alt=""><div><b>Chicken Biryani</b><small>Dinner · Signature</small></div></div></td><td>Main Course</td><td>₹249</td><td><span class='status status--active'>Available</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/burger.webp" alt=""><div><b>Classic Cheese Burger</b><small>Lunch · Bestseller</small></div></div></td><td>Fast Food</td><td>₹199</td><td><span class='status status--active'>Available</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/dessert.webp" alt=""><div><b>Choco Lava Sundae</b><small>Desserts · Hot</small></div></div></td><td>Desserts</td><td>₹159</td><td><span class='status status--active'>Available</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/salmon.webp" alt=""><div><b>Smoked Salmon Steak</b><small>Dinner · Premium</small></div></div></td><td>Main Course</td><td>₹449</td><td><span class='status status--pending'>Out of Stock</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-categories" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Food Categories</h3></div><div class="panel__body" style="display:flex;gap:12px;flex-wrap:wrap">
+    <span class="badge-soft" style="padding:10px 20px">Main Course · 62 items</span><span class="badge-soft" style="padding:10px 20px">Fast Food · 34 items</span>
+    <span class="badge-soft" style="padding:10px 20px">Desserts · 28 items</span><span class="badge-soft" style="padding:10px 20px">Beverages · 18 items</span>
+    <span class="badge-soft" style="padding:10px 20px">Salads · 10 items</span>
+    <button class="btn btn--ghost btn--sm" onclick="STACKLY.toast('Category editor opens here (demo).','info')">+ New Category</button>
+  </div></div>
+</div>
+<div class="dash-panel" id="panel-orders" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Manage Orders</h3></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Order</th><th>Amount</th><th>Payment</th><th>Update Status</th></tr></thead><tbody>
+    <tr><td><div class="cell-prod"><img src="../assets/img/food/pasta.webp" alt=""><div><b>Alfredo Pasta x2</b><small>#SLY-9051</small></div></div></td><td>₹458</td><td>UPI</td>
+      <td><span class="status status--pending"><select data-order-status data-order="#SLY-9051"><option>Pending</option><option>Preparing</option><option>On the way</option><option>Delivered</option><option>Cancelled</option></select></span></td></tr>
+    <tr><td><div class="cell-prod"><img src="../assets/img/food/tandoori.webp" alt=""><div><b>Tandoori Chicken</b><small>#SLY-9049</small></div></div></td><td>₹279</td><td>COD</td>
+      <td><span class="status status--preparing"><select data-order-status data-order="#SLY-9049"><option>Preparing</option><option>On the way</option><option>Delivered</option><option>Cancelled</option></select></span></td></tr>
+  </tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-reservations" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Reservations</h3></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Guest</th><th>Date</th><th>Time</th><th>Guests</th><th>Status</th></tr></thead><tbody><tr><td>Aarav Sharma · 4 guests</td><td>Nov 08, 2026</td><td>7:30 PM</td><td>4</td><td><span class='status status--active'>Confirmed</span></td></tr><tr><td>Priya Nair · date night</td><td>Nov 09, 2026</td><td>8:00 PM</td><td>2</td><td><span class='status status--pending'>Pending</span></td></tr><tr><td>Rohan Mehta · family</td><td>Nov 12, 2026</td><td>1:00 PM</td><td>6</td><td><span class='status status--active'>Confirmed</span></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-payments" style="display:none">
+  <div class="widgets" style="grid-template-columns:repeat(3,1fr)">
+    <div class="widget" style="color:#2E9E5B">
+  <div class="widget__icon" style="background:#E8F7EE;color:#2E9E5B"><svg><use href="../assets/svg/sprite.svg#card"></use></svg></div>
+  <div><b>₹11.2L</b><small>UPI Payments</small></div>
+  <span class="widget__trend widget__trend--up">61% share</span></div>
+    <div class="widget" style="color:#FF6B1A">
+  <div class="widget__icon" style="background:#FFF0E4;color:#FF6B1A"><svg><use href="../assets/svg/sprite.svg#card"></use></svg></div>
+  <div><b>₹5.8L</b><small>Card Payments</small></div>
+  <span class="widget__trend widget__trend--up">31% share</span></div>
+    <div class="widget" style="color:#E8A020">
+  <div class="widget__icon" style="background:#FDF3E3;color:#E8A020"><svg><use href="../assets/svg/sprite.svg#dollar"></use></svg></div>
+  <div><b>₹1.4L</b><small>Cash on Delivery</small></div>
+  <span class="widget__trend widget__trend--down">8% share</span></div>
+  </div>
+</div>
+<div class="dash-panel" id="panel-blogs" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Manage Blogs</h3><button class="btn btn--primary btn--sm">+ New Article</button></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Article</th><th>Author</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead><tbody><tr><td>The Art of the Perfect Tandoor</td><td>Kenji R.</td><td>Feb 24, 2026</td><td><span class='status status--active'>Published</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr><tr><td>2026 Dessert Trends</td><td>Marco D.</td><td>Feb 15, 2026</td><td><span class='status status--active'>Published</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr><tr><td>Behind the New Menu</td><td>Team</td><td>Nov 01, 2026</td><td><span class='status status--pending'>Draft</span></td><td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-reviews" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Customer Reviews</h3></div><div class="panel__body">
+    <div class="review-item"><div class="review-item__head"><img src="../assets/img/testimonials/priya-nair.webp" alt=""><div><b>Priya Nair</b><small>2 days ago</small></div><div class="stars"><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg></div></div>
+      <p>Anniversary dinner was flawless from booking to the last bite of dessert.</p><div class="review-item__dish">Private Dining</div></div>
+    <div class="review-item"><div class="review-item__head"><img src="../assets/img/testimonials/rohan-mehta.webp" alt=""><div><b>Rohan Mehta</b><small>4 days ago</small></div><div class="stars"><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg></div></div>
+      <p>Delivery was 24 minutes. Pizza still crisp. Unreal logistics.</p><div class="review-item__dish">Margherita Pizza</div></div>
+  </div></div>
+</div>
+<div class="dash-panel" id="panel-reports" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Business Reports</h3><button class="btn btn--ghost btn--sm">Export CSV</button></div>
+    <div class="panel__body chart-box"><canvas id="chartRevenue" height="240"></canvas>
+    <div class="legend"><span><i style="background:#FF6B1A"></i>2026 revenue trend</span></div></div></div>
+</div>
+<div class="dash-panel" id="panel-settings" style="display:none">
+  <div class="panel" style="max-width:560px"><div class="panel__head"><h3>Platform Settings</h3></div><div class="panel__body">
+    <div class="form-group"><label class="form-check"><input type="checkbox" checked> Accept new orders</label></div>
+    <div class="form-group"><label class="form-check"><input type="checkbox" checked> Accept table reservations</label></div>
+    <div class="form-group"><label>Delivery Fee (₹)</label><input class="form-control" value="40"></div>
+    <div class="form-group"><label>Free Delivery Above (₹)</label><input class="form-control" value="500"></div>
+    <button class="btn btn--primary" onclick="STACKLY.toast('Platform settings saved.','success')">Save Settings</button>
+  </div></div>
+</div>
+    </div>
+  </main>
+</div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+</body></html>

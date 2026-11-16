@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | STACKLY – Taste the Excellence</title>
+<meta name="description" content="Create your STACKLY account.">
+<link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/auth.css">
+</head><body><div class="preloader" id="preloader">
+  <img src="assets/svg/logo-white.svg" alt="STACKLY" class="preloader__logo">
+  <div class="preloader__dish"></div>
+  <div class="preloader__bar"><span></span></div>
+  <div class="preloader__pct">0%</div>
+</div>
+<main class="auth">
+  <div class="auth__visual">
+    <img src="assets/img/hero/hero-bg.webp" alt="">
+    <div class="auth__visual-content">
+      <a href="index.html"><img src="assets/svg/logo-white.svg" alt="STACKLY" style="height:44px;margin-bottom:30px"></a>
+      <h2>Taste the Excellence.</h2>
+      <p>Your table, your cravings, your dashboard — all one login away.</p>
+      <div class="auth__quote">"Every great meal begins with a single reservation."<b>— The STACKLY Family</b></div>
+    </div>
+  </div>
+  <div class="auth__panel"><div class="auth__box">
+    
+<a href="index.html" class="auth__logo"><img src="assets/svg/logo.svg" alt="STACKLY"></a>
+<h1>Create Account</h1>
+<p>Join STACKLY and unlock ordering, reservations and rewards.</p>
+<form id="registerForm" novalidate>
+  <div class="form-group"><label>Full Name <span class="req">*</span></label><input class="form-control" name="name" placeholder="Your full name"><span class="field-error"></span></div>
+  <div class="form-row">
+    <div class="form-group"><label>Email <span class="req">*</span></label><input class="form-control" type="email" name="email" placeholder="you@example.com"><span class="field-error"></span></div>
+    <div class="form-group"><label>Phone <span class="req">*</span></label><input class="form-control" name="phone" placeholder="+91 98765 43210"><span class="field-error"></span></div>
+  </div>
+  <div class="form-group"><label>Account Role</label>
+    <div class="auth__role">
+      <input type="radio" name="role" id="role-user" value="user" checked><label for="role-user"><svg><use href="assets/svg/sprite.svg#user"></use></svg>Customer</label>
+      <input type="radio" name="role" id="role-seller" value="seller"><label for="role-seller"><svg><use href="assets/svg/sprite.svg#box"></use></svg>Seller</label>
+      <input type="radio" name="role" id="role-admin" value="admin"><label for="role-admin"><svg><use href="assets/svg/sprite.svg#chart"></use></svg>Admin</label>
+    </div></div>
+  <div class="form-group"><label>Password <span class="req">*</span></label>
+    <div class="input-icon"><input class="form-control" type="password" name="password" placeholder="Minimum 8 characters" data-pw-strength>
+      <button type="button" class="input-icon__btn" data-toggle-pw="[name=password]" aria-label="Toggle password"><svg><use href="assets/svg/sprite.svg#eye"></use></svg></button></div>
+    <div class="pw-strength" data-level="0"><span></span><span></span><span></span><span></span></div>
+    <div class="pw-strength-label"></div><span class="field-error"></span></div>
+  <div class="form-group"><label>Confirm Password <span class="req">*</span></label>
+    <div class="input-icon"><input class="form-control" type="password" name="confirm" placeholder="Repeat password">
+      <button type="button" class="input-icon__btn" data-toggle-pw="[name=confirm]" aria-label="Toggle password"><svg><use href="assets/svg/sprite.svg#eye"></use></svg></button></div>
+    <span class="field-error"></span></div>
+  <label class="form-check" style="margin-bottom:20px;font-size:.84rem"><input type="checkbox" name="terms"> I agree to the <a href="404.html" style="color:var(--primary)">Terms &amp; Conditions</a> and <a href="404.html" style="color:var(--primary)">Privacy Policy</a></label>
+  <button class="btn btn--primary btn--block btn--lg" type="submit">Create Account <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></button>
+</form>
+<div class="auth__success">
+  <div class="tick"><svg><use href="assets/svg/sprite.svg#check"></use></svg></div>
+  <h2>Account Created!</h2>
+  <p style="color:var(--muted);margin:10px 0 8px">Welcome to the STACKLY family. You can now log in and start ordering.</p>
+  <a href="login.html" class="btn btn--primary">Go to Login <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a>
+</div>
+<p class="auth__alt">Already have an account? <a href="login.html">Log in</a></p>
+  </div></div>
+</main>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/auth.js"></script>
+
+</body></html>

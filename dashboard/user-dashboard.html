@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Panel | STACKLY</title>
+<link rel="icon" type="image/svg+xml" href="../assets/svg/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head><body>
+<div class="dash__overlay"></div>
+<div class="dash">
+  <aside class="dash__sidebar">
+    <div class="dash__brand"><img src="../assets/svg/logo-white.svg" alt="STACKLY"><div><small>Customer Panel</small></div></div>
+    <nav class="dash__nav">
+      <div class="dash__nav-label">Menu</div>
+      <a href="#" data-panel="panel-overview" class="is-active"><svg><use href="../assets/svg/sprite.svg#grid"></use></svg><span>Overview</span></a>
+<a href="#" data-panel="panel-profile" class=""><svg><use href="../assets/svg/sprite.svg#user"></use></svg><span>My Profile</span></a>
+<a href="#" data-panel="panel-orders" class=""><svg><use href="../assets/svg/sprite.svg#box"></use></svg><span>My Orders</span></a>
+<a href="#" data-panel="panel-history" class=""><svg><use href="../assets/svg/sprite.svg#clock"></use></svg><span>Order History</span></a>
+<a href="#" data-panel="panel-wishlist" class=""><svg><use href="../assets/svg/sprite.svg#heart"></use></svg><span>My Wishlist</span></a>
+<a href="#" data-panel="panel-reservations" class=""><svg><use href="../assets/svg/sprite.svg#calendar"></use></svg><span>My Reservations</span></a>
+<a href="#" data-panel="panel-reviews" class=""><svg><use href="../assets/svg/sprite.svg#star"></use></svg><span>Reviews</span></a>
+<a href="#" data-panel="panel-settings" class=""><svg><use href="../assets/svg/sprite.svg#edit"></use></svg><span>Settings</span></a>
+    </nav>
+    <div class="dash__user">
+      <img src="../assets/img/testimonials/aarav-sharma.webp" alt="">
+      <div><b>Aarav Sharma</b><small>Gold Member</small></div>
+      <button class="dash__logout" data-logout aria-label="Logout"><svg><use href="../assets/svg/sprite.svg#logout"></use></svg></button>
+    </div>
+  </aside>
+  <main class="dash__main">
+    <div class="dash__topbar">
+      <button class="dash__burger" aria-label="Menu"><svg><use href="../assets/svg/sprite.svg#grid"></use></svg></button>
+      <div class="dash__search"><svg><use href="../assets/svg/sprite.svg#search"></use></svg><input placeholder="Search…"></div>
+      <div class="dash__top-actions">
+        <button class="dash__icon-btn" aria-label="Notifications"><svg><use href="../assets/svg/sprite.svg#sparkle"></use></svg><span class="dot"></span></button>
+        <a class="dash__icon-btn" href="../index.html" aria-label="Back to site"><svg><use href="../assets/svg/sprite.svg#home"></use></svg></a>
+      </div>
+    </div>
+    <div class="dash__content">
+      <div class="dash__title-row"><div><h1 data-dash-title>Overview</h1><p>Welcome back, Aarav. Here's what's cooking.</p></div></div>
+      
+<div class="dash-panel" id="panel-overview">
+  <div class="widgets">
+    <div class="widget" style="color:#FF6B1A">
+  <div class="widget__icon" style="background:#FFF0E4;color:#FF6B1A"><svg><use href="../assets/svg/sprite.svg#box"></use></svg></div>
+  <div><b>48</b><small>Total Orders</small></div>
+  <span class="widget__trend widget__trend--up">+4 this month</span></div>
+    <div class="widget" style="color:#E8A020">
+  <div class="widget__icon" style="background:#FDF3E3;color:#E8A020"><svg><use href="../assets/svg/sprite.svg#clock"></use></svg></div>
+  <div><b>2</b><small>Pending Orders</small></div>
+  <span class="widget__trend widget__trend--up">2 active</span></div>
+    <div class="widget" style="color:#2E9E5B">
+  <div class="widget__icon" style="background:#E8F7EE;color:#2E9E5B"><svg><use href="../assets/svg/sprite.svg#check"></use></svg></div>
+  <div><b>43</b><small>Completed Orders</small></div>
+  <span class="widget__trend widget__trend--up">90% rate</span></div>
+    <div class="widget" style="color:#8B3BD6">
+  <div class="widget__icon" style="background:#F3E8FD;color:#8B3BD6"><svg><use href="../assets/svg/sprite.svg#dollar"></use></svg></div>
+  <div><b>₹24,380</b><small>Total Spending</small></div>
+  <span class="widget__trend widget__trend--up">+12% vs last yr</span></div>
+  </div>
+  <div class="dash-grid-2">
+    <div class="panel"><div class="panel__head"><h3>Recent Orders</h3><a href="#" class="panel__action" data-panel-link="panel-orders">View All <svg><use href="../assets/svg/sprite.svg#arrow"></use></svg></a></div>
+      <div class="table-wrap"><table class="dash-table"><thead><tr><th>Order</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td><div class="cell-prod"><img src="../assets/img/food/biryani.webp" alt=""><div><b>Chicken Biryani x2</b><small>#SLY-9041</small></div></div></td><td>Oct 28, 2026</td><td>₹498</td><td><span class='status status--delivered'>Delivered</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/burger.webp" alt=""><div><b>Cheese Burger + Fries</b><small>#SLY-9038</small></div></div></td><td>Oct 25, 2026</td><td>₹249</td><td><span class='status status--delivered'>Delivered</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/pizza.webp" alt=""><div><b>Margherita Pizza L</b><small>#SLY-9046</small></div></div></td><td>Nov 02, 2026</td><td>₹299</td><td><span class='status status--onway'>On the way</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/tandoori.webp" alt=""><div><b>Tandoori Chicken</b><small>#SLY-9049</small></div></div></td><td>Nov 04, 2026</td><td>₹279</td><td><span class='status status--preparing'>Preparing</span></td></tr></tbody></table></div></div>
+    <div class="panel"><div class="panel__head"><h3>Order Tracking — #SLY-9049</h3><span class="status status--preparing">Preparing</span></div>
+      <div class="panel__body">
+        <div class="tracking">
+          <div class="tracking__bar" style="width:44%"></div>
+          <div class="tracking__step is-done"><span class="tracking__dot"><svg><use href="../assets/svg/sprite.svg#check"></use></svg></span><div><b>Placed</b><small>7:02 pm</small></div></div>
+          <div class="tracking__step is-done"><span class="tracking__dot"><svg><use href="../assets/svg/sprite.svg#check"></use></svg></span><div><b>Confirmed</b><small>7:04 pm</small></div></div>
+          <div class="tracking__step is-current"><span class="tracking__dot"><svg><use href="../assets/svg/sprite.svg#flame"></use></svg></span><div><b>Preparing</b><small>In the tandoor</small></div></div>
+          <div class="tracking__step"><span class="tracking__dot"><svg><use href="../assets/svg/sprite.svg#truck"></use></svg></span><div><b>On the way</b><small>~15 min</small></div></div>
+          <div class="tracking__step"><span class="tracking__dot"><svg><use href="../assets/svg/sprite.svg#home"></use></svg></span><div><b>Delivered</b><small>ETA 8:00 pm</small></div></div>
+        </div>
+      </div></div>
+  </div>
+  <div class="panel"><div class="panel__head"><h3>Latest Notifications</h3></div><div class="panel__body">
+    <div class="notif"><span class="notif__icon" style="background:#E8F7EE;color:var(--success)"><svg><use href="../assets/svg/sprite.svg#check"></use></svg></span><div><p><b>Order #SLY-9046 is on the way!</b> Rider Ravi will arrive in ~10 minutes.</p><small>12 min ago</small></div></div>
+    <div class="notif"><span class="notif__icon" style="background:#FDF3E3;color:var(--warning)"><svg><use href="../assets/svg/sprite.svg#percent"></use></svg></span><div><p><b>Weekend Feast:</b> Flat 30% off all burgers with code FEAST30.</p><small>1 day ago</small></div></div>
+    <div class="notif"><span class="notif__icon" style="background:#F3E8FD;color:#8B3BD6"><svg><use href="../assets/svg/sprite.svg#star"></use></svg></span><div><p><b>You earned 120 reward points</b> from your last order. Keep stacking!</p><small>3 days ago</small></div></div>
+  </div></div>
+</div>
+
+<div class="dash-panel" id="panel-profile" style="display:none">
+  <div class="profile-grid">
+    <div class="profile-card">
+      <img src="../assets/img/testimonials/aarav-sharma.webp" alt="Aarav Sharma">
+      <h3>Aarav Sharma</h3><p>Gold Member since 2023</p>
+      <div class="profile-card__stats"><div><b>48</b><small>Orders</small></div><div><b>1,240</b><small>Points</small></div><div><b>12</b><small>Reviews</small></div></div>
+    </div>
+    <div class="panel" style="margin:0"><div class="panel__head"><h3>Edit Profile</h3></div><div class="panel__body">
+      <form id="profileForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label>Full Name</label><input class="form-control" value="Aarav Sharma"></div>
+          <div class="form-group"><label>Email</label><input class="form-control" type="email" value="user@stackly.com"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input class="form-control" value="+91 98765 43210"></div>
+          <div class="form-group"><label>Favourite Dish</label><input class="form-control" value="Chicken Biryani"></div>
+        </div>
+        <div class="form-group"><label>Address</label><textarea class="form-control">402 Marina Heights, Worli Sea Face, Mumbai 400018</textarea></div>
+        <button class="btn btn--primary" type="submit">Save Changes <svg><use href="../assets/svg/sprite.svg#check"></use></svg></button>
+      </form>
+    </div></div>
+  </div>
+</div>
+
+<div class="dash-panel" id="panel-orders" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>My Orders</h3></div><div class="table-wrap"><table class="dash-table"><thead><tr><th>Order</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td><div class="cell-prod"><img src="../assets/img/food/biryani.webp" alt=""><div><b>Chicken Biryani x2</b><small>#SLY-9041</small></div></div></td><td>Oct 28, 2026</td><td>₹498</td><td><span class='status status--delivered'>Delivered</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/burger.webp" alt=""><div><b>Cheese Burger + Fries</b><small>#SLY-9038</small></div></div></td><td>Oct 25, 2026</td><td>₹249</td><td><span class='status status--delivered'>Delivered</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/pizza.webp" alt=""><div><b>Margherita Pizza L</b><small>#SLY-9046</small></div></div></td><td>Nov 02, 2026</td><td>₹299</td><td><span class='status status--onway'>On the way</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/tandoori.webp" alt=""><div><b>Tandoori Chicken</b><small>#SLY-9049</small></div></div></td><td>Nov 04, 2026</td><td>₹279</td><td><span class='status status--preparing'>Preparing</span></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-history" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Order History</h3></div><div class="table-wrap"><table class="dash-table"><thead><tr><th>Order</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td><div class="cell-prod"><img src="../assets/img/food/pasta.webp" alt=""><div><b>Alfredo Pasta</b><small>#SLY-8990</small></div></div></td><td>Sep 30, 2026</td><td>₹229</td><td><span class='status status--completed'>Completed</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/salad.webp" alt=""><div><b>Garden Fresh Salad</b><small>#SLY-8981</small></div></div></td><td>Sep 22, 2026</td><td>₹179</td><td><span class='status status--completed'>Completed</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/dessert.webp" alt=""><div><b>Choco Lava Sundae</b><small>#SLY-8975</small></div></div></td><td>Sep 15, 2026</td><td>₹159</td><td><span class='status status--cancelled'>Cancelled</span></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-wishlist" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>My Wishlist</h3></div><div class="panel__body" style="display:grid;gap:14px">
+    <div class="mini-card"><img src="../assets/img/food/salmon.webp" alt=""><div class="mini-card__info"><b>Smoked Salmon Steak</b><p>Citrus glaze with grilled asparagus</p></div><span class="mini-card__price">₹449</span><button class="btn btn--primary btn--sm">Add to Cart</button></div>
+    <div class="mini-card"><img src="../assets/img/food/truffle.webp" alt=""><div class="mini-card__info"><b>Truffle Fantasy</b><p>Belgian dark chocolate ganache</p></div><span class="mini-card__price">₹199</span><button class="btn btn--primary btn--sm">Add to Cart</button></div>
+    <div class="mini-card"><img src="../assets/img/food/kebab.webp" alt=""><div class="mini-card__info"><b>Paneer Tikka Kebab</b><p>Smoky char-grilled skewers</p></div><span class="mini-card__price">₹219</span><button class="btn btn--primary btn--sm">Add to Cart</button></div>
+  </div></div>
+</div>
+<div class="dash-panel" id="panel-reservations" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Reservation History</h3><a href="../contact.html" class="btn btn--primary btn--sm">New Reservation</a></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Date</th><th>Time</th><th>Guests</th><th>Table</th><th>Status</th></tr></thead><tbody><tr><td>Nov 08, 2026</td><td>7:30 PM</td><td>4</td><td>Window Booth</td><td><span class='status status--active'>Confirmed</span></td></tr><tr><td>Oct 19, 2026</td><td>8:00 PM</td><td>2</td><td>Chef's Counter</td><td><span class='status status--completed'>Completed</span></td></tr><tr><td>Oct 02, 2026</td><td>1:00 PM</td><td>6</td><td>Family Booth</td><td><span class='status status--completed'>Completed</span></td></tr><tr><td>Sep 12, 2026</td><td>7:00 PM</td><td>2</td><td>Window Booth</td><td><span class='status status--cancelled'>Cancelled</span></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-reviews" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>My Reviews</h3></div><div class="panel__body">
+    <div class="review-item"><div class="review-item__head"><img src="../assets/img/testimonials/aarav-sharma.webp" alt=""><div><b>Aarav Sharma</b><small>Oct 28, 2026</small></div><div class="stars"><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg></div></div>
+      <p>Saffron was on point, rice perfectly separate. Best biryani in the city, full stop.</p><div class="review-item__dish">Chicken Biryani</div></div>
+    <div class="review-item"><div class="review-item__head"><img src="../assets/img/testimonials/aarav-sharma.webp" alt=""><div><b>Aarav Sharma</b><small>Sep 15, 2026</small></div><div class="stars"><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg></div></div>
+      <p>Warm, gooey, generous. The lava sundae should be a controlled substance.</p><div class="review-item__dish">Choco Lava Sundae</div></div>
+  </div></div>
+</div>
+<div class="dash-panel" id="panel-settings" style="display:none">
+  <div class="panel" style="max-width:560px"><div class="panel__head"><h3>Account Settings</h3></div><div class="panel__body">
+    <div class="form-group"><label>Change Password</label><input class="form-control" type="password" placeholder="Current password"></div>
+    <div class="form-group"><input class="form-control" type="password" placeholder="New password"></div>
+    <div class="form-group"><input class="form-control" type="password" placeholder="Confirm new password"></div>
+    <div class="form-group"><label class="form-check"><input type="checkbox" checked> Email me offers &amp; news</label></div>
+    <div class="form-group"><label class="form-check"><input type="checkbox" checked> SMS order updates</label></div>
+    <button class="btn btn--primary" type="button" onclick="STACKLY.toast('Settings saved.','success')">Save Settings</button>
+  </div></div>
+</div>
+    </div>
+  </main>
+</div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+</body></html>

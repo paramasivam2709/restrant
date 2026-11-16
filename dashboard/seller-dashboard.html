@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Panel | STACKLY</title>
+<link rel="icon" type="image/svg+xml" href="../assets/svg/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head><body>
+<div class="dash__overlay"></div>
+<div class="dash">
+  <aside class="dash__sidebar">
+    <div class="dash__brand"><img src="../assets/svg/logo-white.svg" alt="STACKLY"><div><small>Seller Panel</small></div></div>
+    <nav class="dash__nav">
+      <div class="dash__nav-label">Menu</div>
+      <a href="#" data-panel="panel-overview" class="is-active"><svg><use href="../assets/svg/sprite.svg#grid"></use></svg><span>Overview</span></a>
+<a href="#" data-panel="panel-restaurant" class=""><svg><use href="../assets/svg/sprite.svg#home"></use></svg><span>My Restaurant</span></a>
+<a href="#" data-panel="panel-add" class=""><svg><use href="../assets/svg/sprite.svg#plus"></use></svg><span>Add Food</span></a>
+<a href="#" data-panel="panel-products" class=""><svg><use href="../assets/svg/sprite.svg#menu-book"></use></svg><span>Manage Products</span></a>
+<a href="#" data-panel="panel-orders" class=""><svg><use href="../assets/svg/sprite.svg#box"></use></svg><span>Orders</span></a>
+<a href="#" data-panel="panel-earnings" class=""><svg><use href="../assets/svg/sprite.svg#dollar"></use></svg><span>Earnings</span></a>
+<a href="#" data-panel="panel-transactions" class=""><svg><use href="../assets/svg/sprite.svg#card"></use></svg><span>Transactions</span></a>
+<a href="#" data-panel="panel-reviews" class=""><svg><use href="../assets/svg/sprite.svg#star"></use></svg><span>Customer Reviews</span></a>
+<a href="#" data-panel="panel-profile" class=""><svg><use href="../assets/svg/sprite.svg#user"></use></svg><span>Profile</span></a>
+<a href="#" data-panel="panel-settings" class=""><svg><use href="../assets/svg/sprite.svg#edit"></use></svg><span>Settings</span></a>
+    </nav>
+    <div class="dash__user">
+      <img src="../assets/img/testimonials/aarav-sharma.webp" alt="">
+      <div><b>Stackly Kitchens</b><small>Verified Seller</small></div>
+      <button class="dash__logout" data-logout aria-label="Logout"><svg><use href="../assets/svg/sprite.svg#logout"></use></svg></button>
+    </div>
+  </aside>
+  <main class="dash__main">
+    <div class="dash__topbar">
+      <button class="dash__burger" aria-label="Menu"><svg><use href="../assets/svg/sprite.svg#grid"></use></svg></button>
+      <div class="dash__search"><svg><use href="../assets/svg/sprite.svg#search"></use></svg><input placeholder="Search…"></div>
+      <div class="dash__top-actions">
+        <button class="dash__icon-btn" aria-label="Notifications"><svg><use href="../assets/svg/sprite.svg#sparkle"></use></svg><span class="dot"></span></button>
+        <a class="dash__icon-btn" href="../index.html" aria-label="Back to site"><svg><use href="../assets/svg/sprite.svg#home"></use></svg></a>
+      </div>
+    </div>
+    <div class="dash__content">
+      <div class="dash__title-row"><div><h1 data-dash-title>Overview</h1><p>Welcome back, Stackly. Here's what's cooking.</p></div></div>
+      
+<div class="dash-panel" id="panel-overview">
+  <div class="earn-hero">
+    <div><h3>Total Earnings</h3><p>Commission-adjusted, settled weekly</p></div>
+    <div class="amount">₹3,42,780</div>
+    <span class="status status--active" style="background:rgba(255,255,255,.12);color:var(--accent)">Payout every Friday</span>
+  </div>
+  <div class="widgets">
+    <div class="widget" style="color:#FF6B1A">
+  <div class="widget__icon" style="background:#FFF0E4;color:#FF6B1A"><svg><use href="../assets/svg/sprite.svg#box"></use></svg></div>
+  <div><b>386</b><small>Total Orders</small></div>
+  <span class="widget__trend widget__trend--up">+22 this week</span></div>
+    <div class="widget" style="color:#E8A020">
+  <div class="widget__icon" style="background:#FDF3E3;color:#E8A020"><svg><use href="../assets/svg/sprite.svg#menu-book"></use></svg></div>
+  <div><b>23</b><small>Active Products</small></div>
+  <span class="widget__trend widget__trend--up">3 low stock</span></div>
+    <div class="widget" style="color:#2E9E5B">
+  <div class="widget__icon" style="background:#E8F7EE;color:#2E9E5B"><svg><use href="../assets/svg/sprite.svg#star"></use></svg></div>
+  <div><b>4.8</b><small>Avg. Rating</small></div>
+  <span class="widget__trend widget__trend--up">1.9k reviews</span></div>
+    <div class="widget" style="color:#8B3BD6">
+  <div class="widget__icon" style="background:#F3E8FD;color:#8B3BD6"><svg><use href="../assets/svg/sprite.svg#dollar"></use></svg></div>
+  <div><b>₹48,200</b><small>This Month</small></div>
+  <span class="widget__trend widget__trend--up">+14% MoM</span></div>
+  </div>
+  <div class="dash-grid-2">
+    <div class="panel"><div class="panel__head"><h3>Sales — Last 8 Weeks</h3></div>
+      <div class="panel__body chart-box"><canvas id="chartSellerSales" height="230"></canvas></div></div>
+    <div class="panel"><div class="panel__head"><h3>Weekly Revenue (₹K)</h3></div>
+      <div class="panel__body chart-box"><canvas id="chartSellerRev" height="230"></canvas></div></div>
+  </div>
+  <div class="panel"><div class="panel__head"><h3>Incoming Orders</h3></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Order</th><th>Amount</th><th>Accept / Reject</th><th>Status</th></tr></thead><tbody>
+    <tr><td><div class="cell-prod"><img src="../assets/img/food/biryani.webp" alt=""><div><b>Chicken Biryani x2</b><small>#SLY-9041 · due 7:45 PM</small></div></div></td><td>₹498</td>
+      <td><div style="display:flex;gap:8px"><button class="btn btn--primary btn--sm" onclick="STACKLY.toast('Order accepted.','success')">Accept</button><button class="btn btn--ghost btn--sm" onclick="STACKLY.toast('Order rejected.','info')">Reject</button></div></td>
+      <td><span class="status status--pending"><select data-order-status data-order="#SLY-9041"><option>Pending</option><option>Preparing</option><option>On the way</option><option>Delivered</option></select></span></td></tr>
+    <tr><td><div class="cell-prod"><img src="../assets/img/food/kebab.webp" alt=""><div><b>Paneer Tikka x3</b><small>#SLY-9044 · due 8:10 PM</small></div></div></td><td>₹657</td>
+      <td><div style="display:flex;gap:8px"><button class="btn btn--primary btn--sm" onclick="STACKLY.toast('Order accepted.','success')">Accept</button><button class="btn btn--ghost btn--sm" onclick="STACKLY.toast('Order rejected.','info')">Reject</button></div></td>
+      <td><span class="status status--preparing">Preparing</span></td></tr>
+  </tbody></table></div></div>
+</div>
+
+<div class="dash-panel" id="panel-restaurant" style="display:none">
+  <div class="profile-grid">
+    <div class="profile-card">
+      <img src="../assets/img/chefs/chef-marco.webp" alt="Stackly Kitchens">
+      <h3>Stackly Kitchens</h3><p>Multi-cuisine · Mumbai HQ</p>
+      <div class="profile-card__stats"><div><b>96</b><small>Products</small></div><div><b>4.8</b><small>Rating</small></div><div><b>₹14.2L</b><small>Revenue</small></div></div>
+    </div>
+    <div class="panel" style="margin:0"><div class="panel__head"><h3>Restaurant Details</h3></div><div class="panel__body">
+      <div class="form-row">
+        <div class="form-group"><label>Restaurant Name</label><input class="form-control" value="Stackly Kitchens"></div>
+        <div class="form-group"><label>Cuisine Type</label><input class="form-control" value="Multi-cuisine"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Phone</label><input class="form-control" value="+91 98765 43210"></div>
+        <div class="form-group"><label>Email</label><input class="form-control" value="kitchens@stackly.com"></div>
+      </div>
+      <div class="form-group"><label>Address</label><textarea class="form-control">221 Gourmet Avenue, Foodie District, Mumbai 400001</textarea></div>
+      <div class="form-row">
+        <div class="form-group"><label>Opening Time</label><input class="form-control" type="time" value="11:00"></div>
+        <div class="form-group"><label>Closing Time</label><input class="form-control" type="time" value="23:00"></div>
+      </div>
+      <button class="btn btn--primary" onclick="STACKLY.toast('Restaurant details saved.','success')">Save Details</button>
+    </div></div>
+  </div>
+</div>
+
+<div class="dash-panel" id="panel-add" style="display:none">
+  <div class="panel" style="max-width:640px"><div class="panel__head"><h3>Add New Food Product</h3></div><div class="panel__body">
+    <form id="addFoodForm" novalidate>
+      <div class="form-group"><label>Dish Name <span class="req">*</span></label><input class="form-control" name="fname" placeholder="e.g. Butter Chicken"></div>
+      <div class="form-row">
+        <div class="form-group"><label>Price (₹) <span class="req">*</span></label><input class="form-control" type="number" name="fprice" placeholder="299"></div>
+        <div class="form-group"><label>Category</label>
+          <select class="form-control" name="fcat"><option>Main Course</option><option>Fast Food</option><option>Desserts</option><option>Beverages</option><option>Salads</option></select></div>
+      </div>
+      <div class="form-group"><label>Description</label><textarea class="form-control" name="fdesc" placeholder="Short, appetising description…"></textarea></div>
+      <div class="form-group"><label>Product Image</label>
+        <div style="border:2px dashed var(--border);border-radius:14px;padding:34px;text-align:center;color:var(--muted);font-size:.88rem">
+          <svg style="width:34px;height:34px;margin:0 auto 10px;color:var(--primary)"><use href="../assets/svg/sprite.svg#box"></use></svg>
+          Drag &amp; drop an image or <span style="color:var(--primary);font-weight:600">browse</span> (demo — wire to your upload API)
+        </div></div>
+      <div class="form-group"><label class="form-check"><input type="checkbox" checked> Available for ordering immediately</label></div>
+      <button class="btn btn--primary" type="submit">Add to Menu <svg><use href="../assets/svg/sprite.svg#plus"></use></svg></button>
+    </form>
+  </div></div>
+</div>
+
+<div class="dash-panel" id="panel-products" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>My Products</h3><a href="#" class="panel__action" data-panel-link="panel-add">+ Add Food</a></div>
+  <div class="table-wrap"><table class="dash-table" id="productTable"><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Availability</th><th>Actions</th></tr></thead><tbody data-product-rows>
+    <tr><td><div class="cell-prod"><img src="../assets/img/food/biryani.webp" alt=""><div><b>Chicken Biryani</b><small>Signature</small></div></div></td><td>Main Course</td><td>₹249</td><td><span class="status status--active">Available</span></td>
+      <td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr>
+    <tr><td><div class="cell-prod"><img src="../assets/img/food/tandoori.webp" alt=""><div><b>Tandoori Chicken</b><small>Best seller</small></div></div></td><td>Main Course</td><td>₹279</td><td><span class="status status--active">Available</span></td>
+      <td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr>
+    <tr><td><div class="cell-prod"><img src="../assets/img/food/kebab.webp" alt=""><div><b>Paneer Tikka Kebab</b><small>Vegetarian</small></div></div></td><td>Starters</td><td>₹219</td><td><span class="status status--pending">Out of Stock</span></td>
+      <td><div class="cell-actions"><button><svg><use href="../assets/svg/sprite.svg#edit"></use></svg></button><button class="danger"><svg><use href="../assets/svg/sprite.svg#trash"></use></svg></button></div></td></tr>
+  </tbody></table></div></div>
+</div>
+
+<div class="dash-panel" id="panel-orders" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>All Orders</h3></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Order</th><th>Date</th><th>Amount</th><th>Payment</th><th>Status</th></tr></thead><tbody><tr><td><div class="cell-prod"><img src="../assets/img/food/biryani.webp" alt=""><div><b>Chicken Biryani x2</b><small>#SLY-9041</small></div></div></td><td>Nov 04</td><td>₹498</td><td>UPI</td><td><span class='status status--delivered'>Delivered</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/kebab.webp" alt=""><div><b>Paneer Tikka x3</b><small>#SLY-9044</small></div></div></td><td>Nov 04</td><td>₹657</td><td>COD</td><td><span class='status status--preparing'>Preparing</span></td></tr><tr><td><div class="cell-prod"><img src="../assets/img/food/burger.webp" alt=""><div><b>Cheese Burger x2</b><small>#SLY-9038</small></div></div></td><td>Nov 02</td><td>₹398</td><td>UPI</td><td><span class='status status--delivered'>Delivered</span></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-earnings" style="display:none">
+  <div class="earn-hero"><div><h3>Lifetime Earnings</h3><p>After 12% platform commission</p></div><div class="amount">₹3,42,780</div>
+    <button class="btn btn--gold">Request Payout</button></div>
+  <div class="panel"><div class="panel__head"><h3>Monthly Breakdown</h3></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>Month</th><th>Orders</th><th>Gross</th><th>Commission</th><th>Net</th></tr></thead><tbody><tr><td>November 2026 (so far)</td><td>42</td><td>₹54,800</td><td>₹6,576</td><td>₹48,224</td></tr><tr><td>October 2026</td><td>148</td><td>₹1,82,300</td><td>₹21,876</td><td>₹1,60,424</td></tr><tr><td>September 2026</td><td>131</td><td>₹1,58,900</td><td>₹19,068</td><td>₹1,39,832</td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-transactions" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Transactions</h3></div>
+  <div class="table-wrap"><table class="dash-table"><thead><tr><th>ID</th><th>Date</th><th>Type</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td>#TXN-7712</td><td>Nov 04</td><td>Order payment</td><td>+ ₹498</td><td><span class='status status--completed'>Settled</span></td></tr><tr><td>#TXN-7710</td><td>Nov 04</td><td>Order payment</td><td>+ ₹279</td><td><span class='status status--completed'>Settled</span></td></tr><tr><td>#PAY-1108</td><td>Nov 01</td><td>Weekly payout</td><td>− ₹38,540</td><td><span class='status status--completed'>Paid</span></td></tr><tr><td>#TXN-7702</td><td>Oct 30</td><td>Order payment</td><td>+ ₹657</td><td><span class='status status--pending'>Processing</span></td></tr></tbody></table></div></div>
+</div>
+<div class="dash-panel" id="panel-reviews" style="display:none">
+  <div class="panel"><div class="panel__head"><h3>Customer Reviews</h3><span class="badge-soft">4.8 average</span></div><div class="panel__body">
+    <div class="review-item"><div class="review-item__head"><img src="../assets/img/testimonials/rohan-mehta.webp" alt=""><div><b>Rohan Mehta</b><small>1 day ago</small></div><div class="stars"><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg></div></div>
+      <p>Biryani arrived hot, saffron generous. This is why I only order from Stackly Kitchens.</p><div class="review-item__dish">Chicken Biryani</div></div>
+    <div class="review-item"><div class="review-item__head"><img src="../assets/img/testimonials/priya-nair.webp" alt=""><div><b>Priya Nair</b><small>3 days ago</small></div><div class="stars"><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg><svg><use href="../assets/svg/sprite.svg#star"></use></svg></div></div>
+      <p>The paneer tikka was smoky perfection. More vegetarian grills please!</p><div class="review-item__dish">Paneer Tikka Kebab</div></div>
+  </div></div>
+</div>
+<div class="dash-panel" id="panel-profile" style="display:none">
+  <div class="panel" style="max-width:560px"><div class="panel__head"><h3>Seller Profile</h3></div><div class="panel__body">
+    <div class="form-group"><label>Display Name</label><input class="form-control" value="Stackly Kitchens"></div>
+    <div class="form-group"><label>Contact Person</label><input class="form-control" value="Marco D'Souza"></div>
+    <div class="form-group"><label>Bio</label><textarea class="form-control">Multi-cuisine cloud kitchen serving STACKLY's signature range across Mumbai.</textarea></div>
+    <button class="btn btn--primary" onclick="STACKLY.toast('Profile saved.','success')">Save Profile</button>
+  </div></div>
+</div>
+<div class="dash-panel" id="panel-settings" style="display:none">
+  <div class="panel" style="max-width:560px"><div class="panel__head"><h3>Settings</h3></div><div class="panel__body">
+    <div class="form-group"><label class="form-check"><input type="checkbox" checked> Accepting orders</label></div>
+    <div class="form-group"><label class="form-check"><input type="checkbox" checked> Auto-accept orders under ₹300</label></div>
+    <div class="form-group"><label>Prep Time Buffer (minutes)</label><input class="form-control" type="number" value="15"></div>
+    <button class="btn btn--primary" onclick="STACKLY.toast('Settings saved.','success')">Save Settings</button>
+  </div></div>
+</div>
+    </div>
+  </main>
+</div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+</body></html>

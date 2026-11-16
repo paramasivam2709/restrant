@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | STACKLY – Taste the Excellence</title>
+<meta name="description" content="Browse the full STACKLY menu — filter by category, search and sort.">
+<link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+</head><body><div class="preloader" id="preloader">
+  <img src="assets/svg/logo-white.svg" alt="STACKLY" class="preloader__logo">
+  <div class="preloader__dish"></div>
+  <div class="preloader__bar"><span></span></div>
+  <div class="preloader__pct">0%</div>
+</div><header class="header header--dark">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo"><img src="assets/img/logo.webp" alt=""><span>STACKLY</span></a>
+    <nav class="nav"><ul class="nav__list">
+      <li><a class="nav__link" href="index.html">Home</a></li>
+      <li><a class="nav__link" href="about.html">About</a></li>
+      <li><a class="nav__link" href="menu.html">Menu</a></li>
+      <li><a class="nav__link" href="services.html">Services</a></li>
+      <li><a class="nav__link" href="pricing.html">Pricing</a></li>
+      <li><a class="nav__link" href="blog.html">Blog</a></li>
+      <li><a class="nav__link" href="contact.html">Contact</a></li>
+    </ul></nav>
+    <div class="header__actions">
+      <button class="header__icon-btn" data-open-cart aria-label="Cart"><svg><use href="assets/svg/sprite.svg#cart"></use></svg><span class="header__cart-count">0</span></button>
+      <a href="login.html" class="btn btn--primary btn--sm header__login">Login</a>
+      <a href="contact.html" class="btn btn--primary btn--sm btn--book">Book a Table</a>
+      <button class="header__burger" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav">
+  <button class="mobile-nav__close" aria-label="Close"><svg><use href="assets/svg/sprite.svg#close"></use></svg></button>
+  <a href="index.html">Home <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a><a href="about.html">About <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a><a href="menu.html">Menu <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a><a href="services.html">Services <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a><a href="pricing.html">Pricing <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a><a href="blog.html">Blog <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a><a href="contact.html">Contact <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a><a href="login.html">Login <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a>
+  <a href="contact.html" style="color:var(--primary)">Book a Table <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></a>
+</nav><section class="page-hero">
+  <div class="page-hero__bg"><img src="assets/img/hero/hero-bg.webp" alt=""></div>
+  <div class="container page-hero__inner">
+    <h1>Our Menu</h1><p>150+ dishes, one promise — everything made fresh, everything made with love.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Menu</span></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:34px" data-aos="fade-up">
+      <div class="input-icon" style="max-width:340px;flex:1;min-width:240px">
+        <input class="form-control" data-menu-search placeholder="Search dishes…" style="border-radius:50px;padding-left:46px">
+        <span class="input-icon__btn" style="left:8px;right:auto;pointer-events:none"><svg><use href="assets/svg/sprite.svg#search"></use></svg></span>
+      </div>
+      <select class="form-control" data-menu-sort style="max-width:220px;border-radius:50px">
+        <option value="default">Sort: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="rating">Top Rated</option>
+      </select>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-pill is-active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="breakfast">Breakfast</button>
+      <button class="filter-pill" data-filter="lunch">Lunch</button>
+      <button class="filter-pill" data-filter="dinner">Dinner</button>
+      <button class="filter-pill" data-filter="desserts">Desserts</button>
+      <button class="filter-pill" data-filter="beverages">Beverages</button>
+    </div>
+    <div class="food-grid" data-menu-grid><article class="food-card" data-category="lunch" data-price="199" data-rating="4.8">
+  <div class="food-card__img">
+    <img src="assets/img/food/burger.webp" alt="Classic Cheese Burger" loading="lazy">
+    <span class="food-card__tag food-card__tag--hot">Hot</span>
+    <button class="food-card__wish" data-wish="classic-cheese-burger" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Classic Cheese Burger</h3>
+    <p class="food-card__desc">Flame-grilled patty, cheddar, house sauce & fries</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹199<s>₹249</s></span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.8 (1.2k)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="classic-cheese-burger" data-name="Classic Cheese Burger" data-price="199" data-img="assets/img/food/burger.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="classic-cheese-burger" data-name="Classic Cheese Burger" data-price="199" data-old="249" data-img="assets/img/food/burger.webp" data-cat="lunch" data-rating="4.8" data-reviews="1.2k" data-desc="Flame-grilled patty, cheddar, house sauce & fries">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="dinner" data-price="249" data-rating="4.9">
+  <div class="food-card__img">
+    <img src="assets/img/food/biryani.webp" alt="Chicken Biryani" loading="lazy">
+    <span class="food-card__tag">Bestseller</span>
+    <button class="food-card__wish" data-wish="chicken-biryani" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Chicken Biryani</h3>
+    <p class="food-card__desc">Slow-cooked basmati, saffron & our secret masala</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹249<s>₹299</s></span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.9 (2.3k)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="chicken-biryani" data-name="Chicken Biryani" data-price="249" data-img="assets/img/food/biryani.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="chicken-biryani" data-name="Chicken Biryani" data-price="249" data-old="299" data-img="assets/img/food/biryani.webp" data-cat="dinner" data-rating="4.9" data-reviews="2.3k" data-desc="Slow-cooked basmati, saffron & our secret masala">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="dinner" data-price="299" data-rating="4.7">
+  <div class="food-card__img">
+    <img src="assets/img/food/pizza.webp" alt="Margherita Pizza" loading="lazy">
+    
+    <button class="food-card__wish" data-wish="margherita-pizza" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Margherita Pizza</h3>
+    <p class="food-card__desc">Wood-fired, fresh basil & molten mozzarella</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹299</span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.7 (1.1k)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="margherita-pizza" data-name="Margherita Pizza" data-price="299" data-img="assets/img/food/pizza.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="margherita-pizza" data-name="Margherita Pizza" data-price="299" data-old="" data-img="assets/img/food/pizza.webp" data-cat="dinner" data-rating="4.7" data-reviews="1.1k" data-desc="Wood-fired, fresh basil & molten mozzarella">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="dinner" data-price="279" data-rating="4.8">
+  <div class="food-card__img">
+    <img src="assets/img/food/tandoori.webp" alt="Tandoori Chicken" loading="lazy">
+    <span class="food-card__tag food-card__tag--hot">Hot</span>
+    <button class="food-card__wish" data-wish="tandoori-chicken" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Tandoori Chicken</h3>
+    <p class="food-card__desc">Char-grilled in clay oven, smoky & juicy</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹279<s>₹329</s></span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.8 (986)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="tandoori-chicken" data-name="Tandoori Chicken" data-price="279" data-img="assets/img/food/tandoori.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="tandoori-chicken" data-name="Tandoori Chicken" data-price="279" data-old="329" data-img="assets/img/food/tandoori.webp" data-cat="dinner" data-rating="4.8" data-reviews="986" data-desc="Char-grilled in clay oven, smoky & juicy">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="dinner" data-price="449" data-rating="4.9">
+  <div class="food-card__img">
+    <img src="assets/img/food/salmon.webp" alt="Smoked Salmon Steak" loading="lazy">
+    
+    <button class="food-card__wish" data-wish="smoked-salmon-steak" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Smoked Salmon Steak</h3>
+    <p class="food-card__desc">Citrus glaze with grilled asparagus</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹449<s>₹499</s></span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.9 (764)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="smoked-salmon-steak" data-name="Smoked Salmon Steak" data-price="449" data-img="assets/img/food/salmon.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="smoked-salmon-steak" data-name="Smoked Salmon Steak" data-price="449" data-old="499" data-img="assets/img/food/salmon.webp" data-cat="dinner" data-rating="4.9" data-reviews="764" data-desc="Citrus glaze with grilled asparagus">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="lunch" data-price="229" data-rating="4.6">
+  <div class="food-card__img">
+    <img src="assets/img/food/pasta.webp" alt="Alfredo Pasta" loading="lazy">
+    
+    <button class="food-card__wish" data-wish="alfredo-pasta" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Alfredo Pasta</h3>
+    <p class="food-card__desc">Silky cream sauce, parmesan & cracked pepper</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹229</span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.6 (892)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="alfredo-pasta" data-name="Alfredo Pasta" data-price="229" data-img="assets/img/food/pasta.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="alfredo-pasta" data-name="Alfredo Pasta" data-price="229" data-old="" data-img="assets/img/food/pasta.webp" data-cat="lunch" data-rating="4.6" data-reviews="892" data-desc="Silky cream sauce, parmesan & cracked pepper">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="breakfast" data-price="179" data-rating="4.5">
+  <div class="food-card__img">
+    <img src="assets/img/food/salad.webp" alt="Garden Fresh Salad" loading="lazy">
+    
+    <button class="food-card__wish" data-wish="garden-fresh-salad" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Garden Fresh Salad</h3>
+    <p class="food-card__desc">Crisp greens, berries & honey-lime dressing</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹179<s>₹219</s></span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.5 (654)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="garden-fresh-salad" data-name="Garden Fresh Salad" data-price="179" data-img="assets/img/food/salad.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="garden-fresh-salad" data-name="Garden Fresh Salad" data-price="179" data-old="219" data-img="assets/img/food/salad.webp" data-cat="breakfast" data-rating="4.5" data-reviews="654" data-desc="Crisp greens, berries & honey-lime dressing">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="desserts" data-price="159" data-rating="4.8">
+  <div class="food-card__img">
+    <img src="assets/img/food/dessert.webp" alt="Choco Lava Sundae" loading="lazy">
+    <span class="food-card__tag food-card__tag--hot">Hot</span>
+    <button class="food-card__wish" data-wish="chocolate-lava-sundae" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Choco Lava Sundae</h3>
+    <p class="food-card__desc">Warm brownie, vanilla scoop & molten chocolate</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹159</span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.8 (1.5k)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="chocolate-lava-sundae" data-name="Choco Lava Sundae" data-price="159" data-img="assets/img/food/dessert.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="chocolate-lava-sundae" data-name="Choco Lava Sundae" data-price="159" data-old="" data-img="assets/img/food/dessert.webp" data-cat="desserts" data-rating="4.8" data-reviews="1.5k" data-desc="Warm brownie, vanilla scoop & molten chocolate">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="beverages" data-price="129" data-rating="4.7">
+  <div class="food-card__img">
+    <img src="assets/img/food/coffee.webp" alt="Iced Caramel Coffee" loading="lazy">
+    
+    <button class="food-card__wish" data-wish="iced-caramel-coffee" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Iced Caramel Coffee</h3>
+    <p class="food-card__desc">Double espresso, caramel & cold milk</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹129<s>₹149</s></span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.7 (2.1k)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="iced-caramel-coffee" data-name="Iced Caramel Coffee" data-price="129" data-img="assets/img/food/coffee.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="iced-caramel-coffee" data-name="Iced Caramel Coffee" data-price="129" data-old="149" data-img="assets/img/food/coffee.webp" data-cat="beverages" data-rating="4.7" data-reviews="2.1k" data-desc="Double espresso, caramel & cold milk">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="dinner" data-price="219" data-rating="4.6">
+  <div class="food-card__img">
+    <img src="assets/img/food/kebab.webp" alt="Paneer Tikka Kebab" loading="lazy">
+    
+    <button class="food-card__wish" data-wish="paneer-tikka-kebab" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Paneer Tikka Kebab</h3>
+    <p class="food-card__desc">Smoky char-grilled cottage cheese skewers</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹219</span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.6 (578)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="paneer-tikka-kebab" data-name="Paneer Tikka Kebab" data-price="219" data-img="assets/img/food/kebab.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="paneer-tikka-kebab" data-name="Paneer Tikka Kebab" data-price="219" data-old="" data-img="assets/img/food/kebab.webp" data-cat="dinner" data-rating="4.6" data-reviews="578" data-desc="Smoky char-grilled cottage cheese skewers">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="desserts" data-price="199" data-rating="4.9">
+  <div class="food-card__img">
+    <img src="assets/img/food/truffle.webp" alt="Truffle Fantasy" loading="lazy">
+    
+    <button class="food-card__wish" data-wish="truffle-fantasy" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Truffle Fantasy</h3>
+    <p class="food-card__desc">Belgian dark chocolate ganache spheres</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹199<s>₹249</s></span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.9 (1.8k)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="truffle-fantasy" data-name="Truffle Fantasy" data-price="199" data-img="assets/img/food/truffle.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="truffle-fantasy" data-name="Truffle Fantasy" data-price="199" data-old="249" data-img="assets/img/food/truffle.webp" data-cat="desserts" data-rating="4.9" data-reviews="1.8k" data-desc="Belgian dark chocolate ganache spheres">View</button>
+    </div>
+  </div>
+</article><article class="food-card" data-category="breakfast" data-price="149" data-rating="4.5">
+  <div class="food-card__img">
+    <img src="assets/img/food/salad.webp" alt="Morning Power Bowl" loading="lazy">
+    
+    <button class="food-card__wish" data-wish="morning-power-bowl" aria-label="Add to wishlist"><svg><use href="assets/svg/sprite.svg#heart"></use></svg></button>
+  </div>
+  <div class="food-card__body">
+    <h3 class="food-card__name">Morning Power Bowl</h3>
+    <p class="food-card__desc">Oats, seasonal fruit, nuts & yogurt</p>
+    <div class="food-card__meta">
+      <span class="food-card__price">₹149</span>
+      <span class="food-card__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg>4.5 (432)</span>
+    </div>
+    <div class="food-card__actions">
+      <button class="btn btn--primary btn--sm" data-add data-id="morning-power-bowl" data-name="Morning Power Bowl" data-price="149" data-img="assets/img/food/salad.webp">Add to Cart</button>
+      <button class="btn btn--ghost btn--sm" data-quickview data-id="morning-power-bowl" data-name="Morning Power Bowl" data-price="149" data-old="" data-img="assets/img/food/salad.webp" data-cat="breakfast" data-rating="4.5" data-reviews="432" data-desc="Oats, seasonal fruit, nuts & yogurt">View</button>
+    </div>
+  </div>
+</article></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="newsletter" data-aos="fade-up">
+      <div><h2>Craving Something New?</h2><p>Our chef experiments every week. Subscribers taste new dishes before anyone else.</p></div>
+      <form class="newsletter__form" novalidate>
+        <input type="email" placeholder="Enter your email address" required>
+        <button class="btn btn--primary" type="submit">Subscribe <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></button>
+        <p class="newsletter__note">By subscribing you agree to our terms. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section><footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo"><img src="assets/img/logo.webp" alt=""><span>STACKLY</span></div>
+        <p>STACKLY serves extraordinary flavours crafted from fresh, honest ingredients — dine in, take away or get it delivered hot to your door.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Share"><svg><use href="assets/svg/sprite.svg#share"></use></svg></a>
+          <a href="#" aria-label="Sparkle"><svg><use href="assets/svg/sprite.svg#sparkle"></use></svg></a>
+          <a href="#" aria-label="Mail"><svg><use href="assets/svg/sprite.svg#mail"></use></svg></a>
+        </div>
+      </div>
+      <div><h4>Quick Links</h4><ul class="footer__links">
+        <li><a href="index.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Home</a></li>
+        <li><a href="about.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>About Us</a></li>
+        <li><a href="menu.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Our Menu</a></li>
+        <li><a href="pricing.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Pricing</a></li>
+        <li><a href="blog.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Blog</a></li>
+        <li><a href="contact.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Contact</a></li>
+      </ul></div>
+      <div><h4>Our Services</h4><ul class="footer__links">
+        <li><a href="services.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Dine-In Experience</a></li>
+        <li><a href="services.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Home Delivery</a></li>
+        <li><a href="services.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Takeaway</a></li>
+        <li><a href="services.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Event Catering</a></li>
+        <li><a href="contact.html"><svg><use href="assets/svg/sprite.svg#chev-right"></use></svg>Reservations</a></li>
+      </ul></div>
+      <div><h4>Contact &amp; Hours</h4>
+        <ul class="footer__contact">
+          <li><svg><use href="assets/svg/sprite.svg#pin"></use></svg>221 Gourmet Avenue, Foodie District, Mumbai 400001</li>
+          <li><svg><use href="assets/svg/sprite.svg#phone"></use></svg>+91 98765 43210</li>
+          <li><svg><use href="assets/svg/sprite.svg#mail"></use></svg>hello@stackly.com</li>
+        </ul>
+        <ul class="footer__hours">
+          <li><span>Mon – Fri</span><b>11:00 – 23:00</b></li>
+          <li><span>Sat – Sun</span><b>10:00 – 00:00</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 STACKLY Restaurant. All rights reserved. Taste the Excellence.</span>
+      <span><a href="404.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="404.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer><div class="scroll-progress"></div>
+<button class="to-top" id="toTop" aria-label="Back to top"><svg><use href="assets/svg/sprite.svg#arrow"></use></svg></button>
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-drawer__head">
+    <h3><svg><use href="assets/svg/sprite.svg#cart"></use></svg> Your Cart</h3>
+    <button class="cart-drawer__close" data-close-cart aria-label="Close cart"><svg><use href="assets/svg/sprite.svg#close"></use></svg></button>
+  </div>
+  <div class="cart-drawer__body"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-total-row"><span>Subtotal</span><span data-cart-sub>₹0</span></div>
+    <div class="cart-total-row"><span>GST (5%)</span><span data-cart-tax>₹0</span></div>
+    <div class="cart-total-row"><span>Delivery</span><span data-cart-del>₹0</span></div>
+    <div class="cart-total-row cart-total-row--grand"><span>Total</span><span data-cart-total>₹0</span></div>
+    <button class="btn btn--primary btn--block" data-checkout>Checkout <svg><use href="assets/svg/sprite.svg#arrow"></use></svg></button>
+  </div>
+</aside>
+<div class="modal" id="quickView">
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__box">
+    <button class="modal__close" data-close-modal aria-label="Close"><svg><use href="assets/svg/sprite.svg#close"></use></svg></button>
+    <div class="qv">
+      <div class="qv__img"><img src="assets/img/food/biryani.webp" alt="Dish"></div>
+      <div class="qv__body">
+        <div class="qv__cat">Signature</div>
+        <h3>Dish name</h3>
+        <div class="qv__rating"><svg><use href="assets/svg/sprite.svg#star"></use></svg><span>4.9</span></div>
+        <div class="qv__price">₹0</div>
+        <p class="qv__desc"></p>
+        <div class="qv__actions">
+          <div class="qty">
+            <button data-qv-qty="dec" aria-label="Decrease"><svg><use href="assets/svg/sprite.svg#minus"></use></svg></button>
+            <output>1</output>
+            <button data-qv-qty="inc" aria-label="Increase"><svg><use href="assets/svg/sprite.svg#plus"></use></svg></button>
+          </div>
+          <button class="btn btn--primary" data-qv-add>Add to Cart <svg><use href="assets/svg/sprite.svg#cart"></use></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>if(window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);</script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/animation.js"></script>
+</body>
+</html>
