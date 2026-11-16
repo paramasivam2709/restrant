@@ -1,0 +1,82 @@
+/* ============================================================
+   responsive.css – STACKLY breakpoint system
+   Desktop 1440+ · Laptop 1024 · Tablet 768 · Mobile 425/375
+   ============================================================ */
+
+@media (max-width:1200px){
+  .food-grid{grid-template-columns:repeat(3,1fr)}
+  .footer__grid{grid-template-columns:1fr 1fr;gap:40px}
+  .newsletter{grid-template-columns:1fr;padding:52px 44px;gap:28px}
+}
+
+@media (max-width:1024px){
+  :root{--header-h:74px}
+  .section{padding:76px 0}
+  .nav__list{display:none}
+  .header__burger{display:grid}
+  .header .btn--book{display:none}
+  .hero__inner{grid-template-columns:1fr;gap:56px;text-align:center}
+  .hero__sub{margin-inline:auto}
+  .hero__cta,.hero__meta{justify-content:center}
+  .hero__visual{order:-1}
+  .hero__plate{width:min(360px,80%)}
+  .about__grid,.grid-2{grid-template-columns:1fr;gap:52px}
+  .about__media{max-width:560px;margin-inline:auto}
+  .why-grid,.services-grid,.blog-grid,.chefs-grid{grid-template-columns:repeat(2,1fr)}
+  .pricing-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}
+  .price-card--featured{transform:none}
+  .price-card--featured:hover{transform:translateY(-10px)}
+  .offers-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .offer{min-height:260px}
+  .offer:first-child{grid-row:auto;min-height:380px}
+  .stats__grid{grid-template-columns:repeat(2,1fr);gap:36px}
+  .qv{grid-template-columns:1fr}
+  .qv__img{min-height:250px;max-height:280px}
+  .testi__card{padding:36px 30px}
+}
+
+@media (max-width:768px){
+  .section{padding:64px 0}
+  .sec-head{margin-bottom:42px}
+  .food-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .why-grid,.services-grid,.blog-grid{grid-template-columns:1fr}
+  .chefs-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{padding-top:120px}
+  .hero__title{font-size:clamp(2.1rem,8vw,3rem)}
+  .hero__chip--orders{right:0}
+  .hero__chip--rating{left:0}
+  .newsletter{padding:44px 30px;border-radius:20px}
+  .newsletter__form{flex-direction:column}
+  .newsletter__form .btn{width:100%}
+  .cta-banner{padding:52px 28px}
+  .form-row{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr;gap:36px}
+  .footer__bottom{flex-direction:column;text-align:center}
+  .about__media-sub{width:180px;right:0;bottom:-24px}
+  .about__exp{left:0;top:-20px;padding:16px 20px}
+  .offer__content{width:100%}
+  .countdown__cell{min-width:54px}
+  .map-embed{height:300px}
+  .filter-bar{gap:8px}
+  .filter-pill{padding:9px 18px;font-size:.82rem}
+}
+
+@media (max-width:480px){
+  .container{width:92%}
+  .food-grid{grid-template-columns:1fr}
+  .chefs-grid{grid-template-columns:1fr}
+  .stats__grid{grid-template-columns:repeat(2,1fr);gap:28px}
+  .hero__meta{gap:22px}
+  .hero__cta .btn{width:100%}
+  .testi__card{padding:30px 22px}
+  .testi__text{font-size:1rem}
+  .cart-drawer{width:100vw}
+  .btn{padding:13px 24px;font-size:.9rem}
+  .newsletter{padding:38px 22px}
+  .countdown{flex-wrap:wrap}
+  .modal__box{border-radius:16px}
+  .qv__body{padding:28px 22px}
+  .page-hero{padding:150px 0 70px}
+  .header__actions .header__icon-btn:nth-child(2){display:none}
+  .hero__scroll{display:none}
+}

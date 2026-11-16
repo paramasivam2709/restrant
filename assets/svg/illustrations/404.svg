@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+<circle cx="200" cy="150" r="120" fill="#FFF3E8"/>
+<circle cx="200" cy="150" r="120" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-dasharray="6 8" opacity=".5"/>
+<ellipse cx="200" cy="200" rx="90" ry="26" fill="#171717" opacity=".08"/>
+<circle cx="200" cy="140" r="70" fill="#fff" stroke="#FF6B1A" stroke-width="4"/>
+<path d="M155 165 q45 -30 90 0 l-8 25 q-37 20 -74 0 z" fill="#FF6B1A"/>
+<circle cx="178" cy="128" r="5" fill="#D6AD60"/><circle cx="200" cy="120" r="5" fill="#D6AD60"/><circle cx="222" cy="128" r="5" fill="#D6AD60"/>
+<circle cx="170" cy="90" r="4" fill="#D6AD60" opacity=".6"/><circle cx="240" cy="80" r="6" fill="#FF6B1A" opacity=".4"/><circle cx="255" cy="110" r="3" fill="#D6AD60" opacity=".6"/>
+<text x="200" y="272" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#777">This dish wandered off the menu…</text>
+</svg>
